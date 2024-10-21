@@ -22,4 +22,24 @@ return {
       },
     },
   },
+  config = function()
+    require('neo-tree').setup {
+      enable_git_status = true,
+      default_component_configs = {
+        git_status = {
+          symbols = {
+            added = 'A', -- Added
+            modified = 'M', -- Modified
+            deleted = 'D', -- Deleted
+            renamed = 'R', -- Renamed
+            untracked = 'U', -- Untracked
+            ignored = 'I', -- Ignored
+            unstaged = 'US', -- Unstaged
+            staged = 'S', -- Staged
+            conflict = 'C', -- Conflict
+          },
+        },
+      },
+    }
+  end,
 }
